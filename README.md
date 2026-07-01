@@ -49,22 +49,9 @@ python main.py
 
 ## 📂 Estrutura do projeto
 Código
-dangerous-space/
-│── code/
-│   ├── Const.py
-│   ├── Game.py
-│   ├── Menu.py
-│   └── __init__.py
-│── imagens/
-│   ├── player.png
-│   ├── meteoro.png
-│   ├── cristal.png
-│   ├── fundo_menu.jpg
-│   ├── fundo_jogo.jpg
-│   └── fundo_fim.png
-│── main.py
-│── requirements.txt
-│── README.md
+<img width="278" height="381" alt="image" src="https://github.com/user-attachments/assets/0eb06a56-9724-4a21-b1e1-84cc74f2ffae" />
+
+
 
 ##✨ Créditos
 Desenvolvido por Ariane
