@@ -48,12 +48,9 @@ bash
 python main.py
 
 ## 📂 Estrutura do projeto
-Código
-<img width="278" height="381" alt="image" src="https://github.com/user-attachments/assets/0eb06a56-9724-4a21-b1e1-84cc74f2ffae" />
+<img width="278" height="381" alt="image" src="https://github.com/user-attachments/assets/bfa7417d-fee5-477e-abc3-5e41a7a26cc9" />
 
-
-
-##✨ Créditos
+## ✨ Créditos
 Desenvolvido por Ariane
 
 Arte das imagens do jogo criadas com apoio de IA
