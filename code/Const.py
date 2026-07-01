@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 import pygame
 # Configurações da Janela
-WIN_WIDTH = 800
-WIN_HEIGHT = 700
+WIN_WIDTH = 700
+WIN_HEIGHT = 530
 FPS = 60
 
 # Cores (RGB)
