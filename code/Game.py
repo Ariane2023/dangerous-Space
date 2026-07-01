@@ -23,20 +23,25 @@ class Game:
         # Carregamento de Imagens da Gameplay com Caminho Absoluto Dinâmico
         try:
             # 1. Personagem e Item (Atenção aos nomes exatos dos arquivos na sua pasta!)
-            caminho_jogador = os.path.join(PASTA_IMAGENS, "player.png")
+            caminho_jogador = os.path.join(PASTA_IMAGENS, "player2.png")
             self.imagem_jogador = pygame.image.load(caminho_jogador).convert_alpha()
-            self.imagem_jogador = pygame.transform.scale(self.imagem_jogador, (50, 50))
+            self.imagem_jogador = pygame.transform.scale(self.imagem_jogador, (100, 100))
 
-            caminho_moeda = os.path.join(PASTA_IMAGENS, "coin.png")
+            caminho_moeda = os.path.join(PASTA_IMAGENS, "cristal.png")
             self.imagem_combustivel = pygame.image.load(caminho_moeda).convert_alpha()
-            self.imagem_combustivel = pygame.transform.scale(self.imagem_combustivel, (30, 30))
+            self.imagem_combustivel = pygame.transform.scale(self.imagem_combustivel, (60, 60))
+
+            caminho_meteoro = os.path.join(PASTA_IMAGENS, "meteoro.png")
+            self.imagem_meteoro = pygame.image.load(caminho_meteoro).convert_alpha()
+            self.imagem_meteoro = pygame.transform.scale(self.imagem_meteoro, (80, 80))
+            self.imagem_meteoro = pygame.transform.rotate(self.imagem_meteoro, 60)
 
             # 2. Fundos das Telas
             caminho_fundo_jogo = os.path.join(PASTA_IMAGENS, "fundo_jogo.jpg")
             self.img_fundo_jogo = pygame.image.load(caminho_fundo_jogo).convert()
             self.img_fundo_jogo = pygame.transform.scale(self.img_fundo_jogo, (WIN_WIDTH, WIN_HEIGHT))
 
-            caminho_fundo_fim = os.path.join(PASTA_IMAGENS, "fundo_fim.png")
+            caminho_fundo_fim = os.path.join(PASTA_IMAGENS, "fundo_fim2.png")
             self.img_fundo_fim = pygame.image.load(caminho_fundo_fim).convert()
             self.img_fundo_fim = pygame.transform.scale(self.img_fundo_fim, (WIN_WIDTH, WIN_HEIGHT))
 
@@ -162,12 +167,14 @@ class Game:
             if self.tem_imagens:
                 self.window.blit(self.imagem_jogador, (jog_x, jog_y))
                 self.window.blit(self.imagem_combustivel, (comb_x, comb_y))
+                self.window.blit(self.imagem_meteoro, (met_x, met_y))
+                
             else:
                 pygame.draw.rect(self.window, C_BLUE, ret_astronauta)
                 pygame.draw.ellipse(self.window, C_YELLOW, ret_combustivel)
 
             # Meteoro desenhado como círculo de destaque
-            pygame.draw.circle(self.window, C_RED, (met_x + 25, met_y + 25), 25)
+            # pygame.draw.circle(self.window, C_RED, (met_x + 25, met_y + 25), 25)
 
             # Interface de texto da gameplay
             self.game_text(25, f"Pontuação: {pontos}/300", C_WHITE, (120, 30))
@@ -202,7 +209,7 @@ class Game:
                         return False # Encerra o jogo
 
     def game_text(self, text_size: int, text: str, text_color: tuple, text_center_pos: tuple):
-        text_font = pygame.font.SysFont(name="Lucida Sans Typewriter", size=text_size, bold=True)
+        text_font = pygame.font.SysFont(name='calibri', size=text_size, bold=True)
         text_surf = text_font.render(text, True, text_color)
         text_rect = text_surf.get_rect(center=text_center_pos)
         self.window.blit(source=text_surf, dest=text_rect)

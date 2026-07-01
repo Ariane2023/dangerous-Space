@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import pygame
 # Configurações da Janela
-WIN_WIDTH = 700
+WIN_WIDTH = 750
 WIN_HEIGHT = 530
 FPS = 60
 
@@ -17,3 +17,9 @@ C_ORANGE = (255, 128, 0)
 
 # Opções do Menu Estilo o Jogo do Professor
 MENU_OPTION = ["START GAME", "EXIT"]
+
+#Para ver as fontes disponíveis
+import pygame
+
+pygame.init()
+print(pygame.font.get_fonts())
